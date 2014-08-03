@@ -2,7 +2,7 @@
 
 # Basic User Authentication app
 
-This is the project from [the blog post at Emily Platzer Makes Things](http://www.emilyplatzer.io/2014/06/29/user-authentication.html).
+This is the project from [the blog post at Emily Platzer Makes Things](http://www.emilyplatzer.io/2014-08-04-active-record-validations.html).
 
 # get this project rolling
 
