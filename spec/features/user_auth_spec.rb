@@ -13,6 +13,16 @@ feature 'Homepage' do
     expect(page).to have_content 'Welcome to the lending library branwyn@example.com'
   end
 
+  scenario 'Users password and password confirmation must match' do
+    visit '/'
+    click_on 'Sign up'
+    fill_in 'Email', with: 'branwyn@example.com'
+    fill_in 'Password', with: 'password'
+    fill_in 'Password confirmation', with: 'another_password'
+    click_on 'Sign up'
+    expect(page).to have_content 'Password confirmation doesn\'t match Password'
+  end
+
   scenario 'User can logout' do
     email_address = 'branwyn@example.com'
     welcome_message = "Welcome to the lending library #{email_address}"
