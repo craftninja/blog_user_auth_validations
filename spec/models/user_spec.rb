@@ -12,4 +12,14 @@ describe User do
     user.password = 'password'
     expect(user.valid?).to be(true)
   end
+
+  it 'validates that user must enter an email' do
+    user = User.new
+    user.password = 'password'
+    user.password_confirmation = 'password'
+    expect(user.valid?).to be(false)
+    user.email = 'mike@example.com'
+    expect(user.valid?).to be(true)
+  end
+
 end
